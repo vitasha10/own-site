@@ -1,0 +1,90 @@
+@import "../../global.scss";
+
+.topbar{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: $topBack;
+    color: $topText;
+
+    .wrapper{
+        height: inherit;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: inherit;
+        .left{
+            display: flex;
+            align-items: center;
+            
+            .topLogo{
+                height: inherit;
+                line-height: 100%;
+                font-size: 40px;
+                font-weight: 700;
+                text-decoration: none;
+                color: inherit;
+                margin-right: 40px;
+
+            }
+            .itemContainer{
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+                @include mobile{
+                    display: none;
+                }
+                .icon{
+                    font-size: 18px;
+                    margin-right: 5px;
+                }
+                a{
+                    font-size: 15px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+        .right{
+            padding-right: 10px;
+            .hamburger{
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                span{
+                    width: 100%;
+                    height: 3px;
+                    background-color: $topText;
+                    transform-origin: left;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+    &.active{
+        background-color: $topText;
+        color: $topBack;
+        .hamburger {
+            span {
+              &:first-child {
+                background-color: white;
+                transform: rotate(45deg);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:last-child {
+                background-color: white;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+    }
+}
