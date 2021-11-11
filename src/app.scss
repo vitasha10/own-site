@@ -1,13 +1,12 @@
 .app{
     height: 100vh;
     width: 100%;
+
     .sections{
         height: calc(100vh - 70px);
-        width: inherit;
         background-color: lightsalmon;
         position: relative;
         top: 70px;
-        overflow-y: scroll;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none;
@@ -15,8 +14,8 @@
             display: none;
         }
         > *{
-            width: inherit;
-            height: inherit;
+            width: 100vw;
+            height: calc(100vh - 70px);
             scroll-snap-align: start;
         }
     }
