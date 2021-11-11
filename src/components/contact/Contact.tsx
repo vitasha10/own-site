@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./contact.scss";
-import nodemailer from "nodemailer";
 
 export default function Contact(): JSX.Element {
   const [message, setMessage] = useState(false);
@@ -12,7 +11,7 @@ export default function Contact(): JSX.Element {
       email: message_email.value,
       message: message_text.value,
     };
-    const transporter = nodemailer.createTransport({
+    /*const transporter = nodemailer.createTransport({
       host: "smtp.yandex.ru",
       port: 465,
       secure: true,
@@ -26,7 +25,8 @@ export default function Contact(): JSX.Element {
       to: "my@vitasha.tk",
       text: `from: ${details.email}, message: ${details.message}`,
       html: `<b>from:</b> ${details.email}<br/><b>message:</b> ${details.message}`,
-    });
+    });*/
+    fetch(`https://api.telegram.org/bot1176025166:AAG1Jfw2JYKgXnqbcA0AsNk86kWy8BeYFuk/sendMessage?chat_id=505103225&text=from: ${details.email},%0D%0Amessage: ${details.message}`)
     setMessage(true);
   }
   return (

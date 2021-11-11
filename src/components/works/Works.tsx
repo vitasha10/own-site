@@ -9,7 +9,7 @@ export default function Works() {
       icon: "/assets/images/mobile.png",
       title: "Web Design",
       desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        "Speaking about my designs, most of all can be said about my preferences to do everything persistently, for a long time and correctly, I think that this is the best way.",
       img:
         "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
     },
@@ -18,7 +18,7 @@ export default function Works() {
       icon: "/assets/images/globe.png",
       title: "Mobile Application",
       desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "I make mobile applications exclusively PWA, they are based on pure JS or React.",
       img:
         "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
     },
@@ -27,7 +27,7 @@ export default function Works() {
       icon: "/assets/images/writing.png",
       title: "Branding",
       desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Branding is protected and my property.",
       img:
         "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
     },
@@ -55,7 +55,7 @@ export default function Works() {
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>Projects</span>
+                  <a href="#portfolio">Portfolio</a>
                 </div>
               </div>
               <div className="right">
