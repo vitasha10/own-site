@@ -29,10 +29,10 @@ export default function Intro(): JSX.Element {
                     <span ref={textRef}></span>
                 </h3>
                 </div>
-                <a href="#portfolio">
-                    <img src="/assets/images/down.png" alt="" />
-                </a>
             </div>
+            <a href="#portfolio">
+                <img src="/assets/images/down.png" alt="" />
+            </a>
         </div>
     )
 }

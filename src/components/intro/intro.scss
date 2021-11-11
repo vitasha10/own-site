@@ -8,21 +8,39 @@
     flex-direction: column;
     align-items: center;
   }
+  a {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50vw - 15px);
 
+    img {
+      width: 30px;
+      animation: arrowBlink 2s infinite;
+    }
+
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0;
+      }
+    }
+  }
   .left {
     flex: 0.5;
     overflow: hidden;
 
     .imgContainer {
-        width: 700px;
-        height: 700px;
+        width: 75vh;
+        height: 75vh;
         border-radius: 50%;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         float: right;
         overflow: hidden;
+        
         @include mobile{
+            width: 700px;
+            height: 700px;
             align-items: flex-start;
         }
 
@@ -89,22 +107,6 @@
             100%{
                 opacity: 0;
             }
-        }
-      }
-    }
-    a {
-      position: absolute;
-      bottom: 10px;
-      left: calc(50% - 15px);
-
-      img {
-        width: 30px;
-        animation: arrowBlink 2s infinite;
-      }
-
-      @keyframes arrowBlink {
-        100% {
-          opacity: 0;
         }
       }
     }

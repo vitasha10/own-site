@@ -2,43 +2,43 @@ import { useEffect, useState } from "react";
 import PortfolioList from "../portfoliolist/PortfolioList";
 import "./portfolio.scss";
 import {
-  featuredPortfolio,
   webPortfolio,
   mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  actualPortfolio,
+  botsPortfolio,
+  workexperiencePortfolio,
 } from "../../data";
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("actual");
   const [data, setData] : [data: any, setData: any] = useState([]);
   const list = [
     {
-      id: "featured",
-      title: "Featured",
+      id: "actual",
+      title: "Actual",
     },
     {
       id: "web",
-      title: "Web App",
+      title: "Web projects (closed)",
     },
     {
       id: "mobile",
-      title: "Mobile App",
+      title: "Mobile Apps (closed)",
     },
     {
-      id: "design",
-      title: "Design",
+      id: "bots",
+      title: "Bots (closed)",
     },
     {
-      id: "content",
-      title: "Content",
+      id: "workexperience",
+      title: "Work experiences",
     },
   ];
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
+      case "actual":
+        setData(actualPortfolio);
         break;
       case "web":
         setData(webPortfolio);
@@ -46,14 +46,14 @@ export default function Portfolio() {
       case "mobile":
         setData(mobilePortfolio);
         break;
-      case "design":
-        setData(designPortfolio);
+      case "bots":
+        setData(botsPortfolio);
         break;
-      case "content":
-        setData(contentPortfolio);
+      case "workexperience":
+        setData(workexperiencePortfolio);
         break;
       default:
-        setData(featuredPortfolio);
+        setData(actualPortfolio);
     }
   }, [selected]);
 
@@ -73,14 +73,21 @@ export default function Portfolio() {
       <div className="container">
         {data.map((d:any) => (
           <div className="item">
-            <img
-              src={d.img}
-              alt=""
-            />
+            <a href={d.img}>
+              <img
+                src={d.img}
+                alt=""
+              />
+            </a>
             <h3>{d.title}</h3>
           </div>
         ))}
       </div>
+      <h2>
+        You can open any of the projects by clicking on them. <br /> 
+        There're 19 public projects and also I have 8 private. <br />
+        Anyway if you're intrested - go to my <a href="https://github.com/vitasha10">GitHub</a>.
+      </h2>
     </div>
   );
 }

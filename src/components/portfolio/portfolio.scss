@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   h1 {
     font-size: 50px;
 
@@ -13,7 +12,13 @@
       font-size: 20px;
     }
   }
-
+  h2 {
+    font-size: 40px;
+    margin: 20px;
+    @include mobile{
+      font-size: 17px;
+    }
+  }
   ul {
     margin: 10px;
     padding: 0;
@@ -33,12 +38,16 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
+    max-height: 50vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     @include mobile{
       width: 100%;
     }
 
     .item {
+      overflow: hidden;
       width: 220px;
       height: 150px;
       border-radius: 20px;
@@ -47,7 +56,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: $topText;
       position: relative;
       transition: all .5s ease;
       cursor: pointer;
@@ -58,8 +67,10 @@
       }
 
       h3 {
+        width: inherit;
+        text-align: center;
         position: absolute;
-        font-size: 20px;
+        font-size: 18px;
       }
 
       img {
@@ -67,12 +78,16 @@
         height: 100%;
         object-fit: cover;
         z-index: 1;
+        opacity: 0.5;
       }
 
       &:hover {
         background-color: $topText;
+        h3{
+          display: none;
+        }
         img {
-          opacity: 0.2;
+          opacity: 1;
           z-index: 0;
         }
       }
