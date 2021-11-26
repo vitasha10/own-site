@@ -1,8 +1,9 @@
-# Hey there! Nice to meet you :)
+<h1><img src="https://raw.githubusercontent.com/vitasha10/vitasha10/main/assets/Hand%20Wave.gif" width="33"/> Hey there! Nice to meet you :)</h1>
 
 <img src="https://raw.githubusercontent.com/vitasha10/own-site/main/home_screen.jpg"/>
 
-Just build and set Nginx or Apache for that dir with HTML.
+💡 &nbsp;Just build and set Nginx or Apache for that dir with HTML.
+✍️ &nbsp;To change texts and another data go to the src folder.
 
 <details>
 <summary>Getting Started with Create React App</summary>
