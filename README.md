@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Hey there! Nice to meet you :)
+
+<img src="https://raw.githubusercontent.com/vitasha10/own-site/main/home_screen.jpg"/>
+
+Just build and set Nginx or Apache for that dir with HTML.
+
+<details>
+<summary>Getting Started with Create React App</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+</details>
